@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title> {% block title %}Services{% endblock title %} | Renewable Energ</title>
+    <style>
+
+      .register{
+        /* text-align: center; */
+        width: 1500px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+
+  </head>
+  <body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">Renewable Energy</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/home">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/abme">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact">Contact Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/admin">Admin</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+{% if messages %}
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show my-0" role="alert">
+  <strong>{{ message }}</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+ {% endfor %}
+{% endif %}
+<!-- <div class="container-fluid px-0 mb-3" >
+  <img src="https://source.unsplash.com/1200x300/?service" class="d-block w-100 mx-0" alt="...">
+</div> -->
+
+<div class="col-lg-8 mx-auto p-3 py-md-5">
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom">
+    <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
+      <span class="fs-4">Services</span>
+    </a>
+  </header>
+
+  <main>
+    <h1>Bio Gas Plant Installation Services</h1>
+    <p class="fs-5 col-md-8">The Biogas Plant Installation Services on principle of Biomethanation where microorganisms consume organic waste to generate methane gas and organic manure. The biogas can be used for cooking, heating water, generation of electricity (only when it processes above 1000 kg per day). The organic manure can be used for internal horticulture.</p>
+
+    <div class="mb-5">
+      <a href="/services/moredetails" class="btn btn-primary btn-lg px-4">More Details</a>
+    </div>
+    <!-- Scrollable modal -->
+
+    <hr class="col-3 col-md-2 mb-5">
+
+    <div class="row g-5">
+      <div class="col-md-6">
+        <h2>Product Details</h2>
+        <p>Although, cattle dung has been recognized as the chief raw material for bio-gas plants, other materials like night-soil, poultry litter and agricultural wastes can also be used. It is a eco-friendly fuel. The required raw materials for biogas production are available abundantly in villages.</p>
+        <h6>The biogas production is carried out in anaerobic 
+          digesters known as Biogas plant. These have five components:</h6>          
+          <p>
+An inlet to feed the slurry.
+The fermentation chamber where the biogas is produced 
+with the activity of microorganisms,The gas storage tank 
+to store the gas produced,The outlet for the used slurry,
+The exit pipe for removing the gas produced.The organic 
+matter if fed into the digesters which are completely 
+submerged in water to provide it with an anaerobic envir-
+onment. These digesters are hence called anaerobic digesters.
+The microorganisms breakdown the organic matter and convert 
+it into biogas.
+        </p>
+        <ul class="icon-list">
+          <li class="text-muted">Location : Karnataka</li>
+          <li class="text-muted">Service Duration : 2 to 4 days</li>
+          <li class="text-muted">Service Mode : Offline</li>
+        </ul>
+      </div>
+
+      <div class="col-md-6">
+        <h2>Guides</h2>
+        <p>BIOGAS IS A TYPE OF BIOFUEL NATURALLY PRODUCED FROM THE DECOMPOSITION OF ORGANIC WASTE. WHEN ORGANIC MATTER, SUCH AS FOOD SCRAPS AND ANIMAL WASTE, BREAKS DOWN IN AN ANAEROBIC ENVIRONMENT (WITHOUT OXYGEN), A BLEND OF GASES, PRIMARILY METHANE AND CARBON DIOXIDE, IS RELEASED.
+          More detailed instructions about Installation Service Watch Video.</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/mqtyYVJtisI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+  <header class="d-flex align-items-center pb-3 mb-5 border-bottom"></header>
+</div>
+
+<div class="register">
+  <header class="d-flex align-items-center pb-2 mb-3 border-bottom">
+  <form method="post" action="/services">
+    {% csrf_token %}
+    <!-- <img class="mb-4" src="/docs/5.2/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57"> -->
+    <h1 class="h3 mb-4 fw-normal">Register For Service</h1>
+
+    <div class="form-floating">
+      <input type="text" name="username" class="form-control" id="floatingInput" placeholder="Username">
+      <label for="floatingInput">User Name</label>
+    </div>
+    <div class="form-floating">
+      <input type="email" name="email" class="form-control" id="floatingPassword" placeholder="exuser@mail.com">
+      <label for="floatingPassword">Email</label>
+    </div>
+    <div class="form-floating">
+      <input type="password" name="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">password</label>
+    </div>
+    <div class="form-floating">
+      <input type="number" name="number" class="form-control" id="floatingPassword" placeholder="Phone Number">
+      <label for="floatingPassword">Phone Number</label>
+    </div>
+    <div class="form-floating">
+      <input type="Text" name="address" class="form-control" id="floatingPassword" placeholder="Address">
+      <label for="floatingPassword">Address</label>
+    </div>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+    <p class="mt-5 mb-3 text-muted">&copy; 2021–2022</p>
+    <!-- <header class="d-flex align-items-center pb-3 mb-5 border-bottom"> -->
+  </form>
+</div>
+
+</body>
+</html>
